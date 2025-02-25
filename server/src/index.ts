@@ -33,5 +33,3 @@ async function testConnection() {
 }
 
 testConnection().catch(console.dir);
-
-// user: admin password: 85lyui1IcwakBBIo
