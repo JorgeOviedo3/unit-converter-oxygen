@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$color-main: #2e0039;
+$color-secondary: #ffffff;
+$color-tertiary: #676767;
+$color-quaternary: #e3e3e3;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 717px;
+  width: 100%;
+  margin: auto;
+
+  @media (max-width: 727px) {
+    padding: 0px 20px;
+  }
+}
+
+#header {
+  height: 48px;
+  box-shadow: 0px 2px 4px 0px #00000040;
+  display: flex;
+  align-items: center;
+  color: $color-main;
+
+  .container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    @media (max-width: 727px) {
+      padding: 0px 10px;
+    }
+
+    .title {
+      font-weight: 900;
+      color: $color-main;
+      font-size: 20px;
+    }
+  }
+}
+
+#converter {
+  margin-top: 51px;
+  @media screen and (max-width: 727px) {
+    margin-top: 30px;
+  }
+  .container {
+    .converter-card {
+      background-color: $color-main;
+      border-radius: 21px;
+      padding: 38px 24px;
+      color: $color-secondary;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &__header {
+        h1 {
+          font-weight: 600;
+          font-size: 24px;
+        }
+      }
+      &__body {
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 727px) {
+          flex-direction: column;
+          align-items: start;
+          gap: 30px;
+          &__left {
+            width: 100% !important;
+            select {
+              width: 70% !important;
+            }
+          }
+          &__right {
+            width: 100% !important;
+            input {
+              width: 70% !important;
+            }
+          }
+        }
+        &__left {
+          width: 50%;
+          display: flex;
+          align-items: end;
+          select {
+            width: 70%;
+            border: none;
+            background-color: transparent;
+            color: $color-secondary;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            border-bottom: 2px solid $color-secondary;
+            padding-bottom: 2px;
+            margin-right: 16px;
+            &:hover {
+              cursor: pointer;
+            }
+            option {
+              color: $color-main;
+            }
+          }
+          img {
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              cursor: pointer;
+              scale: 1.1;
+              transition: all 0.2s ease-in-out;
+            }
+          }
+        }
+        &__right {
+          width: 50%;
+          input {
+            border: none;
+            background-color: transparent;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            width: 70%;
+            color: $color-secondary;
+            text-align: right;
+            border-bottom: 2px solid $color-secondary;
+            padding-bottom: 2px;
+            margin-right: 16px;
+            -moz-appearance: textfield;
+            appearance: textfield;
+          }
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          span {
+            word-wrap: normal;
+          }
+        }
+      }
+      &__footer {
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .save-button {
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            cursor: pointer;
+            scale: 1.1;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+        &__right {
+          font-weight: 700;
+          margin-right: 40px;
+          .value {
+            font-size: 24px;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+          }
+          .unit {
+            font-size: 16px;
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+          }
+        }
+      }
+    }
+  }
+}
+
+#saved {
+  margin: 86px 0px;
+  @media screen and (max-width: 727px) {
+    margin: 40px 0px;
+  }
+
+  .container {
+    h2 {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .saved-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      &__item {
+        box-shadow: 0px 0px 2px 2px #0000001a;
+        background-color: $color-quaternary;
+        width: 49%;
+        border-radius: 10px;
+        padding: 10px 20px;
+        color: $color-tertiary;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        -webkit-user-select: text;
+        -khtml-user-select: text;
+        -moz-user-select: text;
+        -o-user-select: text;
+        user-select: text;
+        .delete-button {
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            cursor: pointer;
+            transform: rotateZ(180deg);
+            transition: all 0.2s ease-in-out;
+          }
+        }
+        @media screen and (max-width: 727px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  background-color: $color-main;
+  margin-top: auto;
+  height: 39px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 31px;
+
+  a {
+    color: $color-secondary;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
+  }
+}
