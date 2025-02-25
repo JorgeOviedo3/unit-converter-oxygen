@@ -1,9 +1,11 @@
-import exchangewhite from "../assets/exchangeWhite.svg";
-import heart from "../assets/heart.svg";
 import { useEffect, useState } from "react";
-import { addConversion } from "../redux/conversionsSlice";
+
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../redux/store";
+import { addConversion } from "../redux/conversionsSlice";
+
+import exchangewhite from "../assets/exchangeWhite.svg";
+import heart from "../assets/heart.svg";
 
 const unitsDictionary: {
   [key: string]: { from: string; to: string; method: (value: number) => number };

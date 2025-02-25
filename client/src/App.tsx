@@ -5,7 +5,7 @@ import Saved from "./components/Saved";
 
 function App() {
   return (
-    <div className="main">
+    <div id="main">
       <Header />
       <Converter />
       <Saved />

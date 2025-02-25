@@ -16,12 +16,8 @@ $color-quaternary: #e3e3e3;
   user-select: none;
 }
 
-body {
+#main {
   font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-}
-
-.main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
